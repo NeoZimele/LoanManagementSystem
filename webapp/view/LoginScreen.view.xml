@@ -1,0 +1,31 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="Loginscreen" controllerName="loansLoanManagementSystem.controller.LoginScreen" displayBlock="true">
+	<App>
+		<pages>
+			<Page backgroundDesign="Solid">
+				<content>
+					<HBox width="100%" alignContent="Center" alignItems="Center" justifyContent="Center" height="250px">
+						<items>
+							<Image width="350px" height="200px" src="images/vingca.png"/>
+						</items>
+					</HBox>
+					<VBox width="100%" direction="Column" alignContent="Center" alignItems="Center" justifyContent="Center">
+						<items>
+							<sap.ui.layout.form:SimpleForm xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="__form0">
+								<sap.ui.layout.form:content>
+									<sap.ui.core:Title text="User Login" emphasized="true" icon="sap-icon://account"/>
+									<Label text="Username"/>
+									<Input width="100%" id="inputuser"/>
+									<Label text="Password"/>
+									<Input  type="Password" id="inputpassword"/>
+								</sap.ui.layout.form:content>
+							</sap.ui.layout.form:SimpleForm>
+							<Button text="Login" width="150px" icon="sap-icon://log" type="Reject" press="onLogin"/>
+							<Button text="Register" width="150px" icon="sap-icon://add-contact" press="onReg"/>
+							<Link text="Forgot password"/>
+						</items>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

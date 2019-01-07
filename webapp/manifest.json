@@ -1,0 +1,170 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "loansLoanManagementSystem",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "loansLoanManagementSystem.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "loansLoanManagementSystem.i18n.i18n"
+				}
+			}
+		},
+
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "loansLoanManagementSystem.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "LoginScreen",
+				"target": "LoginScreen"
+			}, {
+				"pattern": "Registration",
+				"name": "Registration",
+				"target": "Registration"
+			}, {
+				"pattern": "HomePage",
+				"name": "HomePage",
+				"target": "HomePage"
+			}, {
+				"pattern": "RegConfirmation",
+				"name": "RegConfirmation",
+				"target": "RegConfirmation"
+			}, {
+				"pattern": "ApplicationPage",
+				"name": "ApplicationPage",
+				"target": "ApplicationPage"
+			}, {
+				"pattern": "HistoryPage",
+				"name": "HistoryPage",
+				"target": "HistoryPage"
+			}, {
+				"pattern": "ObjectPageHistory/{historyPath}",
+				"name": "ObjectPageHistory",
+				"target": "ObjectPageHistory"
+			}, {
+				"pattern": "HistoryDetails/{historyPath}",
+				"name": "HistoryDetails",
+				"target": "HistoryDetails"
+			}
+			, {
+				"pattern": "SuccessfulRegPage",
+				"name": "SuccessfulRegPage",
+				"target": "SuccessfulRegPage"
+			}, {
+				"pattern": "UpdateProfile",
+				"name": "UpdateProfile",
+				"target": "UpdateProfile"
+			}],
+			"targets": {
+				"LoginScreen": {
+					"viewID": "LoginScreen",
+					"viewName": "LoginScreen"
+				},
+				"Registration": {
+					"viewId": "Registration",
+					"viewName": "Registration"
+				},
+				"HomePage": {
+					"viewId": "HomePage",
+					"viewName": "HomePage"
+				},
+				"RegConfirmation": {
+					"viewId": "RegConfirmation",
+					"viewName": "RegConfirmation"
+				},
+				"ApplicationPage": {
+					"viewId": "ApplicationPage",
+					"viewName": "ApplicationPage"
+				},
+				"HistoryPage": {
+					"viewId": "HistoryPage",
+					"viewName": "HistoryPage"
+				},
+				"ObjectPageHistory": {
+					"viewId": "ObjectPageHistory",
+					"viewName": "ObjectPageHistory"
+				},
+				"HistoryDetails": {
+					"viewId": "HistoryDetails",
+					"viewName": "HistoryDetails"
+				},
+				"SuccessfulRegPage": {
+					"viewId": "SuccessfulRegPage",
+					"viewName": "SuccessfulRegPage"
+				},
+				"UpdateProfile": {
+					"viewId": "UpdateProfile",
+					"viewName": "UpdateProfile"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

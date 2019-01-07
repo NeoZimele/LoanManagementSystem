@@ -1,0 +1,71 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="loansLoanManagementSystem.controller.UpdateProfile" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Update Profile">
+				<content>
+					<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true">
+						<sap.ui.layout.form:formContainers>
+							<sap.ui.layout.form:FormContainer>
+								<sap.ui.layout.form:formElements>
+										<sap.ui.layout.form:FormElement>
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement>
+										<sap.ui.layout.form:fields>
+											<Input width="80%" value="{oUserModel>/Name}"/>
+										</sap.ui.layout.form:fields>
+										<sap.ui.layout.form:label>
+											<Label text="Name" width="100%"/>
+										</sap.ui.layout.form:label>
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement>
+										<sap.ui.layout.form:fields>
+											<Input width="80%" value="{oUserModel>/Surname}"/>
+										</sap.ui.layout.form:fields>
+										<sap.ui.layout.form:label>
+											<Label text="Surname" width="100%"/>
+										</sap.ui.layout.form:label>
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement>
+										<sap.ui.layout.form:fields>
+											<Input width="80%" value="{oUserModel>/Email}"/>
+										</sap.ui.layout.form:fields>
+										<sap.ui.layout.form:label>
+											<Label text="Email" width="100%"/>
+										</sap.ui.layout.form:label>
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="__element0_copy">
+										<!--<sap.ui.layout.form:label>-->
+										<!--    <Label xmlns="sap.m" text="Contact Number" width="100%" required="true" id="__label5"/>-->
+										<!--</sap.ui.layout.form:label>-->
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="__element0_copy2">
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="__element0_copy3">
+									</sap.ui.layout.form:FormElement>
+									<sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="__element0_copy4">
+									</sap.ui.layout.form:FormElement>
+								</sap.ui.layout.form:formElements>
+								<sap.ui.layout.form:title>
+									<core:Title text="Update User's Details" emphasized="true" icon="sap-icon://account"/>
+								</sap.ui.layout.form:title>
+							</sap.ui.layout.form:FormContainer>
+						</sap.ui.layout.form:formContainers>
+						<sap.ui.layout.form:layout>
+							<sap.ui.layout.form:ResponsiveGridLayout/>
+						</sap.ui.layout.form:layout>
+					</sap.ui.layout.form:Form>
+				</content>
+			<footer>
+					<Toolbar width="100%" id="__toolbar1">
+						<content>
+							<!--<Button text="Back" width="90px" id="__button1" type="Back"/>-->
+							<ToolbarSpacer id="__spacer0"/>
+							<Button text="Update" width="100px" icon="sap-icon://kpi-managing-my-area" type="Reject"/>
+						</content>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,61 @@
+<mvc:View xmlns="sap.suite.ui.microchart"  xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified"
+	xmlns:ui="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" class="viewPadding" controllerName="loansLoanManagementSystem.controller.AdminReportPage">
+	<Page title="" showNavButton="true" navButtonPress="onNavBack" backgroundDesign="Solid">
+		<ColumnMicroChart size="M" press="press" class="sapUiSmallMargin">
+			<columns>
+				<ColumnMicroChartData value="100" color="Error"/>
+				<ColumnMicroChartData value="60" color="Neutral"/>
+			</columns>
+		</ColumnMicroChart>
+		<ColumnMicroChart size="M" press="press" class="sapUiSmallMargin">
+			<columns>
+				<ColumnMicroChartData value="60" color="Error"/>
+				<ColumnMicroChartData value="80" color="Error"/>
+				<ColumnMicroChartData value="100" color="Error"/>
+				<ColumnMicroChartData value="60" color="Neutral"/>
+				<ColumnMicroChartData value="55" color="Neutral"/>
+				<ColumnMicroChartData value="15" color="Neutral"/>
+			</columns>
+		</ColumnMicroChart>
+		<ColumnMicroChart size="S" press="press" class="sapUiSmallMargin">
+			<columns>
+				<ColumnMicroChartData value="60" color="Error"/>
+				<ColumnMicroChartData value="100" color="Error"/>
+				<ColumnMicroChartData value="-20" color="Error"/>
+				<ColumnMicroChartData value="60" color="Neutral"/>
+				<ColumnMicroChartData value="55" color="Neutral"/>
+				<ColumnMicroChartData value="15" color="Neutral"/>
+			</columns>
+		</ColumnMicroChart>
+		<ColumnMicroChart size="S" press="press" class="sapUiSmallMargin">
+			<columns>
+				<ColumnMicroChartData value="65" color="Error"/>
+				<ColumnMicroChartData value="90" color="Error"/>
+				<ColumnMicroChartData value="75" color="Error"/>
+				<ColumnMicroChartData value="95" color="Error"/>
+				<ColumnMicroChartData value="100" color="Error"/>
+				<ColumnMicroChartData value="90" color="Error"/>
+				<ColumnMicroChartData value="80" color="Error"/>
+				<ColumnMicroChartData value="35" color="Neutral"/>
+				<ColumnMicroChartData value="65" color="Neutral"/>
+				<ColumnMicroChartData value="55" color="Neutral"/>
+				<ColumnMicroChartData value="60" color="Neutral"/>
+				<ColumnMicroChartData value="5" color="Neutral"/>
+				<ColumnMicroChartData value="15" color="Neutral"/>
+				<ColumnMicroChartData value="15" color="Neutral"/>
+			</columns>
+		</ColumnMicroChart>
+		<ColumnMicroChart size="S" press="press" class="sapUiSmallMargin">
+			<columns>
+				<ColumnMicroChartData value="60" color="Good"/>
+				<ColumnMicroChartData value="100" color="Good"/>
+				<ColumnMicroChartData value="-20" color="Error"/>
+				<ColumnMicroChartData value="60" color="Good"/>
+				<ColumnMicroChartData value="55" color="Neutral"/>
+				<ColumnMicroChartData value="15" color="Critical"/>
+			</columns>
+		</ColumnMicroChart>
+		<ColumnMicroChart size="S" press="press" class="sapUiSmallMargin" height="5rem"></ColumnMicroChart>
+	</Page>
+</mvc:View>

@@ -1,0 +1,8 @@
+<mvc:View
+	height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<MessagePage description=" You will be redirected to the login page." text="Your Profile has been successfully created." showHeader="false" icon="sap-icon://accept">
+	</MessagePage>
+
+</mvc:View>

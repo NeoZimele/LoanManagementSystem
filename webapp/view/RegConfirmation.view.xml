@@ -1,0 +1,7 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="loansLoanManagementSystem.controller.RegConfirmation">
+	<App>
+		<MessagePage description=" You will be redirected to the login page." text="Your Profile has been successfully created." showHeader="false"
+			icon="sap-icon://accept"></MessagePage>
+	</App>
+</mvc:View>

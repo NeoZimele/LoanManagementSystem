@@ -1,0 +1,146 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="loansLoanManagementSystem.controller.HistoryDetails" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<IconTabBar>
+						<items>
+							<IconTabFilter text="Personal details" enabled="true" icon="sap-icon://person-placeholder" design="Horizontal">
+								<content>
+									<VBox class="sapUiSmallMargin">
+										<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+											xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="__form0">
+											<sap.ui.layout.form:content>
+												<Label xmlns="sap.m" text="Name" id="__label0" required="true"/>
+												<Text text="{/Name}"/>
+												<Label xmlns="sap.m" text="Surname" id="__label1" required="true"/>
+												<Text text="{/Surname}"/>
+												<Label xmlns="sap.m" text="Cellphone Number" id="__label2" required="true"/>
+												<Text text="{/Numbers}"/>
+												<Label xmlns="sap.m" text="Email Address" required="true"/>
+												<Text text="{/Email}"/>
+												<Label xmlns="sap.m" text="ID Type" required="true" textAlign="Initial" textDirection="LTR"/>
+												<Text text="{/IDType}"/>
+												<Label id="lblID" text="ID Number" required="true"/>
+												<Text text="{/IDNumber}"/>
+												<Label xmlns="sap.m" text="Date of Birth" required="true"/>
+												<Text text="{/DOB}"/>
+											</sap.ui.layout.form:content>
+										</sap.ui.layout.form:SimpleForm>
+									</VBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter enabled="true" text="Additional Info" icon="sap-icon://activities" design="Horizontal" iconColor="Neutral">
+								<content>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Additional personal information"/>
+											<Label xmlns="sap.m" text="Title" required="true"/>
+											<Text text="{/Title}"/>
+											<Label xmlns="sap.m" text="Home contact number" tooltip="Home contact number"/>
+											<Text text="{/HNumber}"/>
+											<Label xmlns="sap.m" text="Gender" id="__label121" required="true"/>
+											<Text text="{/Gender}"/>
+											<Label xmlns="sap.m" text="Race" required="true" tooltip="Race (for statistical purposes)"/>
+											<Text text="{/Race}"/>
+											<Label xmlns="sap.m" text="Marital status" required="true" tooltip="Marital status"/>
+											<Text text="{/MaritalStatus}"/>
+											<Label xmlns="sap.m" text="Number of dependants" required="true" tooltip="Number of dependants"/>
+											<Text text="{/Dependants}"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Address information"/>
+											<Label xmlns="sap.m" text="Address line 1" required="true"/>
+											<Text text="{/AddressLine1}"/>
+											<Label xmlns="sap.m" text="Addrsss line 2"/>
+											<Text text="{/AddressLine2}"/>
+											<Label xmlns="sap.m" text="Suburb" required="true"/>
+											<Text text="{/Suburb}"/>
+											<Label xmlns="sap.m" text="City" required="true"/>
+											<Text text="{/City}"/>
+											<Label xmlns="sap.m" text="Postal code" required="true"/>
+											<Text text="{/PostalCode}"/>
+											<Label xmlns="sap.m" text="Living arrangements" required="true"/>
+											<Text text="{/LivingArrangements}"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter enabled="true" text="Employment Info" design="Horizontal" iconColor="Neutral" icon="sap-icon://employee-lookup">
+								<content>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="__form3">
+										<sap.ui.layout.form:content>
+											<core:Title xmlns:core="sap.ui.core" text="Employment Details" id="__title4"/>
+											<Label xmlns="sap.m" text="Work contact number" tooltip="Work contact number"/>
+											<Text text="{/WNumber}"/>
+											<Label xmlns="sap.m" text="Highest Qualification" required="true"/>
+											<Text text="{/HighestQualification}"/>
+											<Label xmlns="sap.m" text="Employment status" required="true"/>
+											<Text text="{/EmploymentStatus}"/>
+											<Label xmlns="sap.m" text="Position" required="true"/>
+											<Text text="{/Position}"/>
+											<Label xmlns="sap.m" text="Industry" required="true"/>
+											<Text text="{/Industry}"/>
+											<Label xmlns="sap.m" text="Current employer" required="true"/>
+											<Text text="{/CurrentEmployer}"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title xmlns:core="sap.ui.core" text="Work Physical Address"/>
+											<Label xmlns="sap.m" text="Address line 1" required="true"/>
+											<Text text="{/WAddressLine1}"/>
+											<Label xmlns="sap.m" text="Address line 2"/>
+											<Text text="{/WAddressLine2}"/>
+											<Label xmlns="sap.m" text="Suburb" required="true"/>
+											<Text text="{/WSuburb}"/>
+											<Label xmlns="sap.m" text="City" required="true"/>
+											<Text text="{/WCity}"/>
+											<Label xmlns="sap.m" text="Postal Code" required="true"/>
+											<Text text="{/WPostalCode}"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter enabled="true" text="Financial Info" icon="sap-icon://customer-financial-fact-sheet" design="Horizontal" iconColor="Positive">
+								<content>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Financial information"/>
+											<Label xmlns="sap.m" text="Official financial status" required="true" tooltip="Official financial status"/>
+											<Text text="{/FinanceStatus}"/>
+											<Label text="Source of funds" required="true"/>
+											<Text text="{/Source}"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter text="Attachments" enabled="true" icon="sap-icon://attachment" design="Horizontal" iconColor="Critical">
+								<content>
+									<UploadCollection uploadButtonInvisible="true">
+										<items>
+											<UploadCollectionItem contributor="Contributor1" fileName="fileName1" uploadedDate="Wed Nov 28 2018" id="__item0" visibleEdit="false"
+												visibleDelete="false"/>
+											<UploadCollectionItem contributor="Contributor1" fileName="fileName2" uploadedDate="Wed Nov 28 2018" id="__item1" visibleEdit="false"
+												visibleDelete="false"/>
+											<UploadCollectionItem contributor="Contributor1" fileName="fileName3" uploadedDate="Wed Nov 28 2018" id="__item2" visibleEdit="false"
+												visibleDelete="false"/></items>
+									</UploadCollection>
+								</content>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+				<footer/>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

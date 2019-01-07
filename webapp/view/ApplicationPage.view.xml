@@ -1,0 +1,475 @@
+<mvc:View xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified" xmlns:ui="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" class="viewPadding"
+	controllerName="loansLoanManagementSystem.controller.ApplicationPage">
+	<App>
+		<pages>
+			<Page title="Loan Application" showNavButton="true" navButtonPress="onNavBack" backgroundDesign="Solid">
+				<content>
+					<IconTabBar id="IconBar">
+						<items>
+							<IconTabFilter key="instructions" text="Instructions" icon="sap-icon://check-availability" design="Horizontal" iconColor="Negative">
+								<content>
+									<HBox alignContent="Center" alignItems="Center" width="100%">
+										<core:Icon src="sap-icon://message-information" size="2em"/>
+										<MessageStrip class="sapUiSmallMarginBeginEnd sapUiSmallMarginEnd"
+											text="Please note that you must have following documents ready for this application:" type="None"/>
+										<!--<items>-->
+										<!--	<core:Icon src="sap-icon://message-information" size="2em"/>-->
+										<!--	<Title xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m"-->
+										<!--		text="Please note that you must have following documents ready for this application:" width="100%" id="__title1" titleStyle="H2"/>-->
+										<!--</items>-->
+									</HBox>
+									<VBox class="sapUiSmallMargin">
+										<FormattedText htmlText="{/HTML}"/>
+									</VBox>
+									<HBox alignContent="Center" alignItems="Center" width="100%">
+										<MessageStrip class="sapUiSmallMarginBeginEnd sapUiSmallMarginEnd" type="None"
+											text="To continue with this application you need to check all the boxes below:"/>
+									</HBox>
+									<f:SimpleForm editable="true" layout="ResponsiveGridLayout" width="auto">
+										<f:content>
+											<VBox width="100%">
+												<!--<CheckBox text="You are a union member." textAlign="Left"/>-->
+												<Label text="Please select your union" design="Bold"/>
+												<ComboBox width="80%" id="inpUnions">
+													<items>
+														<ui:ListItem text="Air Botswana Employees' Union"/>
+														<ui:ListItem text="Botswana Agricultural Marketing Board Workers' Union"/>
+														<ui:ListItem text="Botswana Bank Employees' Union"/>
+														<ui:ListItem text="Botswana Beverages and Allied Workers' Union"/>
+														<ui:ListItem text="Botswana Central Bank Staff Union"/>
+														<ui:ListItem text="Botswana Commercial and General Workers' Union"/>
+														<ui:ListItem text="Botswana Constructio Workers' Union"/>
+														<ui:ListItem text="Botswana Diamond Sorters and Valuators' Union"/>
+														<ui:ListItem text="Botswana Hotel Travel and Tourism Workers' Union"/>
+														<ui:ListItem text="Botswana Housing Corporation Staff Union"/>
+														<ui:ListItem text="Botswana Institute of Development Management Workers' Union"/>
+														<ui:ListItem text="Botswana Manufacturing and Packaging Workers' Union"/>
+														<ui:ListItem text="Botswana Meat Industry Workers' Union"/>
+														<ui:ListItem text="Botswana Mining Workers' Union"/>
+														<ui:ListItem text="Botswana National Development Bank Staff Union"/>
+														<ui:ListItem text="Botswana Postal Services Workers' Union"/>
+														<ui:ListItem text="Botswana Power Corporation Workers' Union"/>
+														<ui:ListItem text="Botswana Private Medical and Health Services Workers' Union"/>
+														<ui:ListItem text="Botswana Railways Amalgamated Workers' Union"/>
+														<ui:ListItem text="Botswana Saving Bank Employees' Union"/>
+														<ui:ListItem text="Botswana Telecommunication Employees' Union"/>
+														<ui:ListItem text="Botswana Vaccine Institute Staff Union"/>
+														<ui:ListItem text="Botswana Wholesale, Furniture and Retail Workers' Union"/>
+														<ui:ListItem text="National Amalgamated Central, Local and Parastatal Manual Workers' Union"/>
+														<ui:ListItem text="Rural Industry Promotions Company Workers' Union"/>
+														<ui:ListItem text="University of Botswana Non-Academic Staff Union"/>
+													</items>
+												</ComboBox>
+												<CheckBox text="You confirm that you'll answer all questions fully and truthfully." textAlign="Left" width="auto"/>
+												<!--<Input xmlns="sap.m" width="100%"/>-->
+												<CheckBox
+													text="You give bank permission to do credit check with a credit bureau and assessing your credit standing based on the information you give us during this application.">
+													<layoutData>
+														<l:GridData linebreak="true"/>
+													</layoutData>
+												</CheckBox>
+											</VBox>
+										</f:content>
+									</f:SimpleForm>
+									<HBox width="100%" alignContent="End" alignItems="End" direction="Column">
+										<items><Button text="Next" width="auto" id="__button00" type="Reject" icon="sap-icon://navigation-right-arrow" press="onPersonalDetailsNext"/>
+										</items>
+									</HBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter key="affordability" enabled="false" text="Affordability Check" id="Affordability" icon="sap-icon://commission-check"
+								design="Horizontal" iconColor="Positive">
+								<content>
+									<VBox alignItems="Start" width="100%" alignContent="Inherit">
+										<items>
+											<Title xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m"
+												text="Let's find out if you qualify" width="100%" id="__title12" titleStyle="H2"/>
+											<!--<MessageStrip class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" text="This check will take less than 5 minutes to complete." showIcon="true"/>-->
+										</items>
+									</VBox>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Status"/>
+											<Label xmlns="sap.m" text="Marital status" required="true" tooltip="Marital status"/>
+											<ComboBox id="cmbMStatus">
+												<items>
+													<ui:ListItem text="Single"/>
+													<ui:ListItem text="Married"/>
+													<ui:ListItem text="Divorced"/>
+													<ui:ListItem text="Widowed"/>
+													<ui:ListItem text="Other"/>
+												</items>
+											</ComboBox>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="__form0_copy">
+										<sap.ui.layout.form:content>
+											<core:Title text="Income"/>
+											<Label xmlns="sap.m" text="Gross monthly income" required="true" tooltip="Payment amount before deductions"/>
+											<Input id="inpGross" type="Number" value="0"/>
+											<Label xmlns="sap.m" text="Net monthly income" required="true" tooltip="Salary after deductions"/>
+											<Input xmlns="sap.m" id="inpNett" width="auto" required="true" type="Number" value="0"/>
+											<Label xmlns="sap.m" text="Income from other sources" required="true" width="auto" tooltip="Average monthly income from other sources"/>
+											<Input xmlns="sap.m" id="inpOther" width="100%" type="Number" value="0"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Total Monthly Expenses"/>
+											<Label xmlns="sap.m" text="Living expenses" required="true" tooltip="Total monthly living expenses"/>
+											<Input xmlns="sap.m" id="inpTotalExp" width="100%" type="Number" value="0"/>
+											<Label xmlns="sap.m" text="Debt repayments" required="true" tooltip="Total monthly debt repayments"/>
+											<Input xmlns="sap.m" id="inpTotalDebt" width="auto" required="true" type="Number" value="0"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Loan"/>
+											<Label xmlns="sap.m" text="Loan amount required" required="true" tooltip="Loan amount required"/>
+											<Input id="inpReqAmount" width="100%" type="Number" value="0"/>
+											<Label xmlns="sap.m" text="Payment term" required="true" tooltip="Payment arrangements"/>
+											<ComboBox id="cmbTerm">
+												<items>
+													<ui:ListItem text="6 Months"/>
+													<ui:ListItem text="12 Months"/>
+													<ui:ListItem text="18 Months"/>
+												</items>
+											</ComboBox>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<HBox width="100%" id="__hbox032" alignContent="End" alignItems="End" direction="Column">
+										<items><Button text="Check Affordability" width="auto" id="__button430" type="Reject" icon="sap-icon://commission-check"
+											press="CheckAffordabilityMessageBoxPress"/>
+										</items>
+									</HBox>
+								</content>
+								<!--<headerContent>-->
+								<!--<Toolbar width="100%" id="__toolbar1">-->
+								<!--	<content>-->
+								<!--<Button icon="sap-icon://log" width="auto" type="Reject" press="onLogout"/>-->
+								<!--		<Button class="sapUiSmallMarginBottom" press="CheckAffordabilityMessageBoxPress" width="auto" type="Reject" icon="sap-icon://log" tap="" validationSuccess=""/>-->
+								<!--	</content>-->
+								<!--</Toolbar>-->
+								<!--</headerContent>-->
+							</IconTabFilter>
+							<IconTabFilter enabled="false" key="insurance" id="insuranceTab" text="Insurance" icon="sap-icon://monitor-payments" iconColor="Critical"
+								design="Horizontal">
+								<content>
+									<Title text="Please attach proof of insurance" width="100%" titleStyle="H2"/>
+									<VBox class="sapUiMediumMarginTopBottom" alignContent="SpaceBetween">
+										<Label text="Proof of Insurance" width="100%" required="true" design="Bold"/>
+										<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"
+											change="onProofAttachmentChange" typeMissmatch="handleTypeMissmatch" style="Emphasized" placeholder="Choose a file for Upload..."/>
+									</VBox>
+									<HBox width="100%" alignContent="End" alignItems="End" direction="Column">
+										<items><Button text="Next" width="auto" type="Reject" icon="sap-icon://navigation-right-arrow" press="onInstructionNext"/>
+										</items>
+									</HBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="detailsTab" key="details" text="Personal details" enabled="false" icon="sap-icon://person-placeholder"
+								design="Horizontal">
+								<content>
+									<VBox class="sapUiSmallMargin">
+										<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+											xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="__form0">
+											<sap.ui.layout.form:content>
+												<Label xmlns="sap.m" text="Title" required="true"/>
+												<ComboBox id="cmbTitle">
+													<items>
+														<ui:ListItem text="Mr"/>
+														<ui:ListItem text="Ms"/>
+														<ui:ListItem text="Mrs"/>
+														<ui:ListItem text="Miss"/>
+														<ui:ListItem text="Professor"/>
+														<ui:ListItem text="Doctor"/>
+														<ui:ListItem text="Judge"/>
+													</items>
+												</ComboBox>
+												<Label xmlns="sap.m" text="Name" required="true"/>
+												<Input width="100%" id="inpName" type="Text"/>
+												<Label xmlns="sap.m" text="Surname" required="true"/>
+												<Input xmlns="sap.m" width="100%" id="inpSurname" type="Text"/>
+												<Label xmlns="sap.m" text="Cellphone Number" required="true"/>
+												<Input xmlns="sap.m" width="100%" id="inpNumber" type="Number"/>
+												<Label xmlns="sap.m" text="Email Address" required="true"/>
+												<Input xmlns="sap.m" width="100%" id="inpEmail" type="Email"/>
+												<Label xmlns="sap.m" text="ID Type" required="true" textAlign="Initial" textDirection="LTR"/>
+												<RadioButtonGroup width="100%" columns="2" selectedIndex="-1" id="__group0" select="onIDTypePress">
+													<buttons>
+														<RadioButton selected="true" groupName="__group0" text="ID"/>
+														<RadioButton groupName="__group0" text="Passport"/></buttons>
+												</RadioButtonGroup>
+												<Label id="lblID" text="ID Number" required="true"/>
+												<Input id="inpIDNum" width="100%" type="Number"/>
+												<Label xmlns="sap.m" text="Date of Birth" required="true"/>
+												<!--<Label text="Date of Birth"/>-->
+												<DatePicker id="inpDOB" dateValue="{/date}"/>
+												<!--<Input xmlns="sap.m" width="100%" type="Number"/>-->
+											</sap.ui.layout.form:content>
+										</sap.ui.layout.form:SimpleForm>
+									</VBox>
+									<HBox width="100%" id="__hbox0" alignContent="End" alignItems="End" direction="Column">
+										<items>
+											<Button text="Next" width="auto" id="__button0" type="Reject" icon="sap-icon://navigation-right-arrow" press="onInsuranceNext"/>
+										</items>
+									</HBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter key="add" enabled="false" text="Additional Info" id="addinfo" icon="sap-icon://activities" design="Horizontal"
+								iconColor="Neutral">
+								<content>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Additional Personal Information"/>
+											<Label xmlns="sap.m" text="Home contact number"/>
+											<Input id="inpHNumber" width="auto" type="Tel"/>
+											<Label xmlns="sap.m" text="Gender" id="__label121" required="true"/>
+											<ComboBox id="cmbGender">
+												<items>
+													<ui:ListItem text="Female"/>
+													<ui:ListItem text="Male"/></items>
+											</ComboBox>
+											<Label xmlns="sap.m" text="Race" required="true" tooltip="Race (for statistical purposes)"/>
+											<ComboBox id="cmbRace">
+												<items>
+													<ui:ListItem text="Black"/>
+													<ui:ListItem text="Indian"/>
+													<ui:ListItem text="White"/>
+													<ui:ListItem text="Coloured"/>
+													<ui:ListItem text="Other"/>
+												</items>
+											</ComboBox>
+											<Label xmlns="sap.m" text="Number of dependants" required="true" tooltip="Number of dependants"/>
+											<Input id="inpDep" width="100%" type="Number"/>
+											<!--<Label xmlns="sap.m" text="Nationality" required="true"/>-->
+											<!--<Input id="inpNationality" width="100%"/>-->
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Address Information"/>
+											<Label text="Address line 1" required="true"/>
+											<Input id="inpAddressLine1" width="auto"/>
+											<Label xmlns="sap.m" text="Addrsss line 2"/>
+											<Input id="inpAddressLine2" width="auto" required="true"/>
+											<Label xmlns="sap.m" text="Suburb" required="true"/>
+											<Input id="inpSuburb" width="auto" required="true"/>
+											<Label xmlns="sap.m" text="City" required="true"/>
+											<Input id="inpCity" width="100%" type="Text"/>
+											<Label xmlns="sap.m" text="Postal code" required="true"/>
+											<Input id="inpPostalCode" width="100%" type="Text"/>
+											<Label xmlns="sap.m" text="Living arrangements" required="true"/>
+											<ComboBox id="cmbLArrange">
+												<items>
+													<ui:ListItem text="Owner"/>
+													<ui:ListItem text="Tenant"/>
+												</items>
+											</ComboBox>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<VBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="100%"
+										direction="Column" id="__vbox0_copy" alignContent="End" alignItems="End">
+										<items>
+											<Button text="Next" width="auto" type="Reject" icon="sap-icon://navigation-right-arrow" press="onAddInfoNext"/>
+										</items>
+									</VBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="employTab" key="employ" enabled="false" text="Employment Info" design="Horizontal" iconColor="Neutral"
+								icon="sap-icon://employee-lookup">
+								<content>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="__form3">
+										<sap.ui.layout.form:content>
+											<core:Title xmlns:core="sap.ui.core" text="Employment Details"/>
+											<Label text="Work contact number" tooltip="Work contact number"/>
+											<Input id="WNumber" width="100%" type="Tel"/>
+											<Label xmlns="sap.m" text="Highest Qualification" required="true"/>
+											<Input id="highestQual" width="auto"/>
+											<Label xmlns="sap.m" text="Employment status" required="true"/>
+											<!--<Input id="inpEmpStatus" width="auto" required="true"/>-->
+											<ComboBox id="cmbEmploymentStatus">
+												<items>
+													<ui:ListItem text="Permanent"/>
+													<ui:ListItem text="Contract"/>
+												</items>
+											</ComboBox>
+											<Label xmlns="sap.m" text="Position" required="true"/>
+											<Input id="inpOccu" width="100%"/>
+											<Label xmlns="sap.m" text="Industry"/>
+											<Input id="inpIndustry" width="100%" value="Government" editable="false"/>
+											<Label xmlns="sap.m" text="Current employer" required="true"/>
+											<!--<Input id="inpEmployer" width="100%"/>-->
+											<ComboBox id="cmbCurrentEmployer">
+												<items>
+													<ui:ListItem text="Administration of Justice"/>
+													<ui:ListItem text="Department of Immigration and Citizenship"/>
+													<ui:ListItem text="Department of Industrial Affairs Industrial"/>
+													<ui:ListItem text="Department of International Trade"/>
+													<ui:ListItem text="Ministry of Agriculture"/>
+													<ui:ListItem text="Ministry of Education and Skills Development"/>
+													<ui:ListItem text="Ministry of Environment, Wildlife and Tourism"/>
+													<ui:ListItem text="Ministry of Finance and Development Planning"/>
+													<ui:ListItem text="Ministry of Foreign Affairs and International Cooperation"/>
+													<ui:ListItem text="Ministry of Health"/>
+													<ui:ListItem text="Ministry of Infrastructure, Science and Technology"/>
+													<ui:ListItem text="Ministry of Investment, Trade and Industry"/>
+													<ui:ListItem text="Ministry of Labour and Home Affairs"/>
+													<ui:ListItem text="Ministry of Lands and Housing"/>
+													<ui:ListItem text="Ministry of Local Government"/>
+													<ui:ListItem text="Ministry of Minerals, Energy and Water Resources"/>
+													<ui:ListItem text="Ministry of Nationality, Immigration and Gender Affairs"/>
+													<ui:ListItem text="Office of the President"/>
+													<ui:ListItem text="Parliament of Botswana"/>
+													<ui:ListItem text="Ministry of Trade and Industry"/>
+													<ui:ListItem text="Ministry of Trade and Industry "/>
+													<ui:ListItem text="Ministry of Transport and Communications "/>
+													<ui:ListItem text="Ministry of Youth, Sport and Culture"/>
+													<ui:ListItem text="The Commissioner of Labour"/>
+													<ui:ListItem text="Other"/>
+												</items>
+											</ComboBox>
+											<Label xmlns="sap.m" text="If Other, specify"/>
+											<Input id="inpOtherCemployer" width="100%"/>
+											<!--<Label xmlns="sap.m" text="Start working date" required="true"/>-->
+											<!--<DatePicker id="inpStartDate"/>-->
+											<!--<VBox width="auto">-->
+											<!--<Label xmlns="sap.m" text="Currently working"/>-->
+											<!--<CheckBox id="chkCurrent" text="" textAlign="Right"/>-->
+											<!--</VBox>-->
+											<!--<Label xmlns="sap.m" text="End working date"/>-->
+											<!--<DatePicker id="inpEndDate"/>-->
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title xmlns:core="sap.ui.core" text="Work Physical Address"/>
+											<Label xmlns="sap.m" text="Address line 1" required="true"/>
+											<Input id="inpWAddrLine1" width="auto" required="true"/>
+											<Label xmlns="sap.m" text="Address line 2"/>
+											<Input id="inpWAddrLine2" width="auto" required="true"/>
+											<Label xmlns="sap.m" text="Suburb" required="true"/>
+											<Input id="inpWSuburb" width="100%" required="true"/>
+											<Label xmlns="sap.m" text="City" required="true"/>
+											<Input id="inpWCity" width="100%" required="true"/>
+											<Label xmlns="sap.m" text="Postal Code" required="true"/>
+											<Input id="inpWpostalCode" width="100%" required="true" type="Text"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<VBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="100%"
+										direction="Column" id="__vbox0_copy2" alignContent="End" alignItems="End">
+										<items>
+											<Button text="Next" width="auto" type="Reject" icon="sap-icon://navigation-right-arrow" id="__button2" press="onEmployInfoNext"/>
+										</items>
+									</VBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="financeTab" key="finance" enabled="false" text="Financial Info" icon="sap-icon://customer-financial-fact-sheet"
+								design="Horizontal" iconColor="Positive">
+								<content>
+									<sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+										xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout">
+										<sap.ui.layout.form:content>
+											<core:Title text="Financial information"/>
+											<Label xmlns="sap.m" text="Official financial status" required="true" tooltip="Official financial status"/>
+											<ComboBox id="cmbFinanceStatus">
+												<items>
+													<ui:ListItem text="Healthy"/>
+													<ui:ListItem text="Under debt review"/>
+													<ui:ListItem text="Under administration"/>
+													<ui:ListItem text="Dispute with credit bureau"/></items>
+											</ComboBox>
+											<Label text="Source of funds" required="true"/>
+											<!--<ComboBox id="cmbSource">-->
+											<!--	<items>-->
+											<!--		<ui:ListItem text="Salary Earner"/>-->
+											<!--		<ui:ListItem text="Self employed"/>-->
+											<!--		<ui:ListItem text="Director salary"/>-->
+											<!--		<ui:ListItem text="Pension"/>-->
+											<!--	</items>-->
+											<!--</ComboBox>-->
+											<Input id="inpSource" width="100%" value="Salary earner" editable="false"/>
+										</sap.ui.layout.form:content>
+									</sap.ui.layout.form:SimpleForm>
+									<VBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="100%"
+										direction="Column" id="__vbox0" alignContent="End" alignItems="End">
+										<items>
+											<Button text="Next" width="auto" type="Reject" icon="sap-icon://navigation-right-arrow" press="onFinanceInfoNext"/>
+										</items>
+									</VBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter key="attach" text="Attachments" enabled="true" id="Attachments" icon="sap-icon://attachment" design="Horizontal"
+								iconColor="Critical">
+								<content>
+									<!--ID doc-->
+									<Title text="Please attach the following documents" width="100%" id="__title5"/>
+									<l:VerticalLayout>
+										<VBox class="sapUiMediumMarginTopBottom" alignContent="SpaceBetween">
+											<Label text="ID Document" width="100%" required="true" design="Bold"/>
+											<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"
+												change="onIDAttachmentChange" typeMissmatch="handleTypeMissmatch" style="Emphasized" placeholder="Choose a file for Upload..."/>
+										</VBox>
+										<l:content>
+											<VBox class="sapUiMediumMarginTopBottom" alignItems="Start">
+												<Label text="Latest Payslip" width="100%" required="true" design="Bold"/>
+												<u:FileUploader id="fileUploader_copy" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server"
+													uploadComplete="handleUploadComplete" change="onPayslipAttachmentChange" typeMissmatch="handleTypeMissmatch" style="Emphasized"
+													placeholder="Choose a file for Upload..."/>
+											</VBox>
+											<!--<l:content>-->
+											<VBox class="sapUiMediumMarginTopBottom" alignItems="Start">
+												<Label text="Proof of Address" width="100%" required="true" design="Bold"/>
+												<u:FileUploader xmlns:ui="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+													xmlns:html="http://www.w3.org/1999/xhtml" xmlns:u="sap.ui.unified" id="fileUploader_copy2" name="myFileUpload" uploadUrl="upload/"
+													tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete" change="onAddressAttachmentChange"
+													typeMissmatch="handleTypeMissmatch" style="Emphasized" placeholder="Choose a file for Upload...">
+													<u:parameters>
+														<u:FileUploaderParameter name="param1" value="Foo" id="__parameter8"/>
+														<u:FileUploaderParameter name="param2" value="bar" id="__parameter9"/>
+													</u:parameters>
+													<u:headerParameters>
+														<u:FileUploaderParameter name="headerParam1" value="Foo" id="__parameter10"/>
+														<u:FileUploaderParameter name="headerParam2" value="bar" id="__parameter11"/>
+													</u:headerParameters>
+												</u:FileUploader>
+												<!--<Button xmlns:u="sap.ui.unified" xmlns:ui="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Upload File" press="handleUploadPress" id="__button6"/>-->
+											</VBox>
+										</l:content>
+									</l:VerticalLayout>
+									<Toolbar width="100%" id="__toolbar2">
+										<content>
+											<Toolbar xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" width="100%"
+												id="__toolbar1">
+												<content>
+													<!--<Button text="Back" width="90px" id="__button1_copy" type="Back"/>-->
+													<ToolbarSpacer/>
+													<Button text="Submit" width="100px" id="__button0_copy" icon="sap-icon://accept" type="Accept" press="onSubmitApplication"/>
+												</content>
+											</Toolbar>
+										</content>
+									</Toolbar>
+								</content>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button type="Emphasized" text="Save Draft" visible="false"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

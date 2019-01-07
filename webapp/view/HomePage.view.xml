@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" id="Homepage" controllerName="loansLoanManagementSystem.controller.HomePage">
+	<App>
+		<pages>
+			<Page title="Home" backgroundDesign="Solid">
+				<content>
+					<TileContainer allowAdd="true">
+						<tiles>
+							<StandardTile class="body" title="Apply for Loan" info="Loan application" icon="images/LoanIcon.png" activeIcon="sap-icon://customer" infoState="Error" press="onApplicationPage"/>
+							<StandardTile xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" title="Applicaton History" info="Customer history" icon="images/HistoryIcon.png" activeIcon="sap-icon://customer" infoState="Error" press="onHistoryTile"/>
+						</tiles>
+					</TileContainer>
+				</content>
+				<headerContent>
+					<Toolbar width="100%" id="__toolbar1">
+						<content>
+							<!--<Button icon="sap-icon://log" width="auto" type="Reject" press="onLogout"/>-->
+							<!--<Button class="sapUiSmallMarginBottom" press="handleConfirmationMessageBoxPress" width="auto" type="Reject" icon="sap-icon://log"/>-->
+							<Button text="Default User" width="auto" icon="sap-icon://account" press="handlePressOpenMenu" id="openMenu"/>
+						</content>
+					</Toolbar>
+				</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
